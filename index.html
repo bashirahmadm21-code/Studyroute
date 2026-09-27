@@ -6,7 +6,8 @@
 
 <title>StudyRoute | Study Abroad Guide & Cost Calculator</title>
 
-<meta name="description" content="StudyRoute helps students explore study abroad destinations, calculate costs, find scholarships and plan their international education journey.">
+<meta name="description"
+content="StudyRoute helps students explore study abroad destinations, calculate costs, discover scholarships and plan their international education journey.">
 
 <style>
 *{
@@ -26,16 +27,19 @@ body{
     line-height:1.6;
 }
 
+/* HEADER */
+
 header{
     background:#102a43;
     color:white;
-    padding:18px 6%;
+    padding:17px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:100;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
 .logo{
@@ -46,36 +50,42 @@ header{
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:18px;
+    margin-left:20px;
     font-size:14px;
 }
+
+nav a:hover{
+    color:#7db5ff;
+}
+
+/* HERO */
 
 .hero{
     background:linear-gradient(135deg,#102a43,#1677ff);
     color:white;
     text-align:center;
-    padding:70px 20px 85px;
+    padding:80px 20px 100px;
 }
 
 .hero h1{
-    font-size:42px;
-    margin-bottom:15px;
+    font-size:46px;
+    margin-bottom:16px;
 }
 
 .hero p{
-    max-width:700px;
+    max-width:720px;
     margin:auto;
     color:#e5eef8;
     font-size:18px;
 }
 
 .hero-buttons{
-    margin-top:28px;
+    margin-top:30px;
 }
 
 .hero-buttons a{
     display:inline-block;
-    padding:13px 22px;
+    padding:14px 24px;
     margin:5px;
     border-radius:10px;
     text-decoration:none;
@@ -92,18 +102,26 @@ nav a{
     color:white;
 }
 
+.primary:hover{
+    background:#edf4ff;
+}
+
+/* CONTAINER */
+
 .container{
     max-width:1100px;
-    margin:-45px auto 50px;
+    margin:-50px auto 60px;
     padding:0 18px;
     position:relative;
 }
 
+/* CARDS */
+
 .card{
     background:white;
     border-radius:18px;
-    padding:28px;
-    margin-bottom:25px;
+    padding:30px;
+    margin-bottom:30px;
     box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
@@ -113,8 +131,10 @@ nav a{
 
 .subtitle{
     color:#667085;
-    margin-bottom:22px;
+    margin-bottom:24px;
 }
+
+/* CALCULATOR */
 
 .form-grid{
     display:grid;
@@ -128,7 +148,8 @@ label{
     margin-bottom:7px;
 }
 
-input,select{
+input,
+select{
     width:100%;
     padding:13px;
     border:1px solid #d0d5dd;
@@ -139,7 +160,7 @@ input,select{
 button{
     width:100%;
     padding:15px;
-    margin-top:22px;
+    margin-top:23px;
     border:0;
     border-radius:10px;
     background:#1677ff;
@@ -147,6 +168,10 @@ button{
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
+}
+
+button:hover{
+    background:#0d63db;
 }
 
 .result{
@@ -171,17 +196,25 @@ button{
     display:flex;
     justify-content:space-between;
     border-bottom:1px solid #dbe5ef;
-    padding:8px 0;
+    padding:9px 0;
 }
+
+/* SECTION TITLES */
 
 .section-title{
     text-align:center;
-    margin:45px 0 20px;
+    margin:50px 0 22px;
+}
+
+.section-title h2{
+    font-size:28px;
 }
 
 .section-title p{
     color:#667085;
 }
+
+/* GRID */
 
 .grid{
     display:grid;
@@ -191,9 +224,15 @@ button{
 
 .feature{
     background:white;
-    padding:24px;
+    padding:25px;
     border-radius:15px;
     box-shadow:0 5px 20px rgba(0,0,0,.06);
+    transition:.2s;
+}
+
+.feature:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
 .feature h3{
@@ -210,7 +249,7 @@ button{
 }
 
 .country .flag{
-    font-size:38px;
+    font-size:40px;
     margin-bottom:8px;
 }
 
@@ -222,36 +261,85 @@ button{
     text-decoration:none;
 }
 
-.earning-box{
-    background:#102a43;
+/* ROADMAP */
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.step{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    line-height:42px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    background:#1677ff;
+    color:white;
+    font-weight:bold;
+}
+
+/* SCHOLARSHIP BOX */
+
+.scholarship-box{
+    background:linear-gradient(135deg,#102a43,#174a7c);
     color:white;
     border-radius:18px;
-    padding:30px;
+    padding:32px;
     margin-top:25px;
 }
 
-.earning-box p{
+.scholarship-box p{
     color:#d9e5f0;
     margin-top:8px;
 }
 
-.earning-list{
-    margin-top:18px;
-    padding-left:20px;
+.scholarship-box a{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:#102a43;
+    padding:12px 20px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
     text-align:center;
-    padding:35px 20px;
+    padding:40px 20px;
     background:#102a43;
     color:#d9e5f0;
     font-size:14px;
 }
 
+footer h3{
+    color:white;
+    margin-bottom:8px;
+}
+
 footer a{
     color:white;
     margin:0 8px;
+    text-decoration:none;
 }
+
+.footer-links{
+    margin-top:15px;
+}
+
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -263,17 +351,30 @@ footer a{
         display:none;
     }
 
+    .hero{
+        padding:65px 18px 85px;
+    }
+
     .hero h1{
-        font-size:30px;
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
     }
 
     .form-grid,
-    .grid{
+    .grid,
+    .roadmap{
         grid-template-columns:1fr;
     }
 
     .card{
         padding:20px;
+    }
+
+    .section-title h2{
+        font-size:24px;
     }
 }
 </style>
@@ -281,15 +382,23 @@ footer a{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
     <div class="logo">🌍 StudyRoute</div>
 
     <nav>
         <a href="#calculator">Calculator</a>
         <a href="#countries">Countries</a>
-        <a href="#tools">Tools</a>
+        <a href="#scholarships">Scholarships</a>
+        <a href="#roadmap">Roadmap</a>
     </nav>
+
 </header>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -297,17 +406,26 @@ footer a{
 
     <p>
         Explore study destinations, calculate your first-year budget,
-        discover scholarships and plan your journey abroad.
+        discover scholarships and plan your journey abroad — all in one place.
     </p>
 
     <div class="hero-buttons">
-        <a class="primary" href="#calculator">💰 Calculate Cost</a>
-        <a class="secondary" href="#countries">🎓 Explore Countries</a>
+
+        <a class="primary" href="#calculator">
+            💰 Calculate Cost
+        </a>
+
+        <a class="secondary" href="#countries">
+            🎓 Explore Countries
+        </a>
+
     </div>
 
 </section>
 
+
 <main class="container">
+
 
 <!-- CALCULATOR -->
 
@@ -325,6 +443,7 @@ footer a{
             <label>Country</label>
 
             <select id="country">
+
                 <option value="Italy">🇮🇹 Italy</option>
                 <option value="Germany">🇩🇪 Germany</option>
                 <option value="France">🇫🇷 France</option>
@@ -333,6 +452,7 @@ footer a{
                 <option value="Poland">🇵🇱 Poland</option>
                 <option value="UK">🇬🇧 United Kingdom</option>
                 <option value="Australia">🇦🇺 Australia</option>
+
             </select>
         </div>
 
@@ -376,6 +496,7 @@ footer a{
     <button onclick="calculateCost()">
         Calculate My First-Year Cost
     </button>
+
 
     <div class="result" id="result">
 
@@ -423,66 +544,359 @@ footer a{
 
 </section>
 
+
 <!-- COUNTRIES -->
 
 <div class="section-title" id="countries">
+
     <h2>🌍 Popular Study Destinations</h2>
-    <p>Start exploring your study abroad options.</p>
+
+    <p>
+        Explore countries students commonly consider for international study.
+    </p>
+
 </div>
+
 
 <section class="grid">
 
     <div class="feature country">
+
         <div class="flag">🇮🇹</div>
+
         <h3>Italy</h3>
-        <p>Explore universities, tuition costs and scholarships.</p>
+
+        <p>
+            Explore universities, tuition costs and scholarships.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
+
     <div class="feature country">
+
         <div class="flag">🇩🇪</div>
+
         <h3>Germany</h3>
-        <p>Learn about studying and budgeting in Germany.</p>
+
+        <p>
+            Learn about studying and budgeting in Germany.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
+
     <div class="feature country">
+
         <div class="flag">🇭🇺</div>
+
         <h3>Hungary</h3>
-        <p>Explore affordable study opportunities.</p>
+
+        <p>
+            Explore affordable study opportunities.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
+
     <div class="feature country">
+
         <div class="flag">🇫🇷</div>
+
         <h3>France</h3>
-        <p>Explore education and living-cost planning.</p>
+
+        <p>
+            Explore education and living-cost planning.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
+
     <div class="feature country">
+
         <div class="flag">🇬🇧</div>
+
         <h3>United Kingdom</h3>
-        <p>Plan your estimated study abroad budget.</p>
+
+        <p>
+            Plan your estimated study abroad budget.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
+
     <div class="feature country">
+
         <div class="flag">🇦🇺</div>
+
         <h3>Australia</h3>
-        <p>Explore study and budget planning tools.</p>
+
+        <p>
+            Explore study and budget planning tools.
+        </p>
+
         <a href="#calculator">Calculate Cost →</a>
+
     </div>
 
 </section>
 
+
 <!-- TOOLS -->
 
-<div class="section-title" id="tools">
-    <h2>🎓 StudyRoute Tools</h2>
-    <p>More tools will be added as StudyRoute grows.</p>
+<div class="section-title">
+
+    <h2>🛠️ StudyRoute Tools</h2>
+
+    <p>
+        Helpful tools for planning your international education journey.
+    </p>
+
 </div>
+
 
 <section class="grid">
 
-    <div class="feature
+    <div class="feature">
+
+        <h3>💰 Cost Calculator</h3>
+
+        <p>
+            Estimate tuition, living, accommodation, visa,
+            insurance and flight expenses.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>🎓 University Guide</h3>
+
+        <p>
+            Compare universities, programs and study destinations.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>💸 Scholarship Finder</h3>
+
+        <p>
+            Discover scholarship opportunities and funding options.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>📋 Application Checklist</h3>
+
+        <p>
+            Keep track of documents and important application steps.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>🛂 Visa Guide</h3>
+
+        <p>
+            Learn about common student visa requirements and processes.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>💼 Career Planning</h3>
+
+        <p>
+            Explore career planning resources for international students.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SCHOLARSHIPS -->
+
+<section class="scholarship-box" id="scholarships">
+
+    <h2>🎓 Looking for Scholarships?</h2>
+
+    <p>
+        Find scholarship opportunities and learn how financial
+        support can reduce your study abroad expenses.
+    </p>
+
+    <a href="#tools">
+        Explore Scholarship Tools →
+    </a>
+
+</section>
+
+
+<!-- ROADMAP -->
+
+<div class="section-title" id="roadmap">
+
+    <h2>🧭 Your Study Abroad Roadmap</h2>
+
+    <p>
+        Follow these basic steps to start planning your journey.
+    </p>
+
+</div>
+
+
+<section class="roadmap">
+
+    <div class="step">
+
+        <div class="step-number">1</div>
+
+        <h3>Choose Country</h3>
+
+        <p>
+            Explore destinations and select your preferred country.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">2</div>
+
+        <h3>Find University</h3>
+
+        <p>
+            Research universities and suitable programs.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">3</div>
+
+        <h3>Apply</h3>
+
+        <p>
+            Prepare documents and submit your application.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">4</div>
+
+        <h3>Start Journey</h3>
+
+        <p>
+            Prepare for your visa, travel and new student life.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>🌍 StudyRoute</h3>
+
+    <p>
+        Your guide to planning study abroad.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#calculator">Calculator</a>
+        <a href="#countries">Countries</a>
+        <a href="#scholarships">Scholarships</a>
+        <a href="#roadmap">Roadmap</a>
+
+    </div>
+
+    <p style="margin-top:20px;">
+        © 2026 StudyRoute. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function calculateCost(){
+
+    const country =
+        document.getElementById("country").value;
+
+    const rate =
+        Number(document.getElementById("rate").value);
+
+    const tuition =
+        Number(document.getElementById("tuition").value);
+
+    const living =
+        Number(document.getElementById("living").value);
+
+    const accommodation =
+        Number(document.getElementById("accommodation").value);
+
+    const visa =
+        Number(document.getElementById("visa").value);
+
+    const insurance =
+        Number(document.getElementById("insurance").value);
+
+    const flight =
+        Number(document.getElementById("flight").value);
+
+
+    const yearlyLiving = living * 12;
+
+    const yearlyAccommodation =
+        accommodation * 12;
+
+
+    const total =
+        tuition +
+        yearlyLiving +
+        yearlyAccommodation +
+        visa +
+        insurance +
+        flight;
+
+
+    const pkr =
+       
