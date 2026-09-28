@@ -583,6 +583,8 @@ footer a{
 
         <p>
             Learn about studying and budgeting in Germany.
+        </p>
+
         <a href="germany.html">Explore Germany →</a>
 
     </div>
@@ -598,7 +600,7 @@ footer a{
             Explore affordable study opportunities.
         </p>
 
-        <a href="hungary.html">🇭🇺 Hungary</a>
+        <a href="hungary.html">Explore Hungary →</a>
 
     </div>
 
@@ -643,7 +645,7 @@ footer a{
             Explore study and budget planning tools.
         </p>
 
-        <title>Study in Australia | StudyRoute</title>
+        <a href="australia.html">Explore Australia →</a>
 
     </div>
 
@@ -652,7 +654,7 @@ footer a{
 
 <!-- TOOLS -->
 
-<div class="section-title">
+<div class="section-title" id="tools">
 
     <h2>🛠️ StudyRoute Tools</h2>
 
@@ -897,4 +899,42 @@ function calculateCost(){
 
 
     const pkr =
-       
+        total * rate;
+
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("resultTitle").innerText =
+        country + " — Estimated First-Year Cost";
+
+    document.getElementById("euroTotal").innerText =
+        "€" + total.toLocaleString();
+
+    document.getElementById("pkrTotal").innerText =
+        "≈ PKR " + pkr.toLocaleString();
+
+
+    document.getElementById("rTuition").innerText =
+        "€" + tuition.toLocaleString();
+
+    document.getElementById("rLiving").innerText =
+        "€" + yearlyLiving.toLocaleString();
+
+    document.getElementById("rAccommodation").innerText =
+        "€" + yearlyAccommodation.toLocaleString();
+
+    document.getElementById("rVisa").innerText =
+        "€" + visa.toLocaleString();
+
+    document.getElementById("rInsurance").innerText =
+        "€" + insurance.toLocaleString();
+
+    document.getElementById("rFlight").innerText =
+        "€" + flight.toLocaleString();
+
+}
+
+</script>
+
+</body>
+            </html>
