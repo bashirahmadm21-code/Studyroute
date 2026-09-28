@@ -149,12 +149,19 @@ label{
 }
 
 input,
-select{
+select,
+textarea{
     width:100%;
     padding:13px;
     border:1px solid #d0d5dd;
     border-radius:9px;
     font-size:16px;
+    font-family:Arial,sans-serif;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
 button{
@@ -314,6 +321,39 @@ button:hover{
     font-weight:bold;
 }
 
+/* GUIDANCE FORM */
+
+.guidance{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin-top:30px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.guidance h2{
+    margin-bottom:8px;
+}
+
+.guidance-text{
+    color:#667085;
+    margin-bottom:24px;
+}
+
+.guidance-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.guidance-full{
+    grid-column:1 / -1;
+}
+
+.guidance button{
+    margin-top:20px;
+}
+
 /* FOOTER */
 
 footer{
@@ -365,11 +405,17 @@ footer a{
 
     .form-grid,
     .grid,
-    .roadmap{
+    .roadmap,
+    .guidance-grid{
         grid-template-columns:1fr;
     }
 
-    .card{
+    .guidance-full{
+        grid-column:auto;
+    }
+
+    .card,
+    .guidance{
         padding:20px;
     }
 
@@ -392,6 +438,7 @@ footer a{
         <a href="#calculator">Calculator</a>
         <a href="#countries">Countries</a>
         <a href="#scholarships">Scholarships</a>
+        <a href="#guidance">Guidance</a>
         <a href="#roadmap">Roadmap</a>
     </nav>
 
@@ -497,7 +544,6 @@ footer a{
         Calculate My First-Year Cost
     </button>
 
-
     <div class="result" id="result">
 
         <h3 id="resultTitle"></h3>
@@ -561,92 +607,50 @@ footer a{
 <section class="grid">
 
     <div class="feature country">
-
         <div class="flag">🇮🇹</div>
-
         <h3>Italy</h3>
-
-        <p>
-            Explore universities, tuition costs and scholarships.
-        </p>
-
+        <p>Explore universities, tuition costs and scholarships.</p>
         <a href="italy.html">Explore Italy →</a>
-
     </div>
 
 
     <div class="feature country">
-
         <div class="flag">🇩🇪</div>
-
         <h3>Germany</h3>
-
-        <p>
-            Learn about studying and budgeting in Germany.
-        </p>
-
+        <p>Learn about studying and budgeting in Germany.</p>
         <a href="germany.html">Explore Germany →</a>
-
     </div>
 
 
     <div class="feature country">
-
         <div class="flag">🇭🇺</div>
-
         <h3>Hungary</h3>
-
-        <p>
-            Explore affordable study opportunities.
-        </p>
-
+        <p>Explore affordable study opportunities.</p>
         <a href="hungary.html">Explore Hungary →</a>
-
     </div>
 
 
     <div class="feature country">
-
         <div class="flag">🇫🇷</div>
-
         <h3>France</h3>
-
-        <p>
-            Explore education and living-cost planning.
-        </p>
-
+        <p>Explore education and living-cost planning.</p>
         <a href="france.html">Explore France →</a>
-
     </div>
 
 
     <div class="feature country">
-
         <div class="flag">🇬🇧</div>
-
         <h3>United Kingdom</h3>
-
-        <p>
-            Plan your estimated study abroad budget.
-        </p>
-
+        <p>Plan your estimated study abroad budget.</p>
         <a href="uk.html">Explore UK →</a>
-
     </div>
 
 
     <div class="feature country">
-
         <div class="flag">🇦🇺</div>
-
         <h3>Australia</h3>
-
-        <p>
-            Explore study and budget planning tools.
-        </p>
-
+        <p>Explore study and budget planning tools.</p>
         <a href="australia.html">Explore Australia →</a>
-
     </div>
 
 </section>
@@ -668,69 +672,46 @@ footer a{
 <section class="grid">
 
     <div class="feature">
-
         <h3>💰 Cost Calculator</h3>
-
         <p>
             Estimate tuition, living, accommodation, visa,
             insurance and flight expenses.
         </p>
-
     </div>
 
-
     <div class="feature">
-
         <h3>🎓 University Guide</h3>
-
         <p>
             Compare universities, programs and study destinations.
         </p>
-
     </div>
 
-
     <div class="feature">
-
         <h3>💸 Scholarship Finder</h3>
-
         <p>
             Discover scholarship opportunities and funding options.
         </p>
-
     </div>
 
-
     <div class="feature">
-
         <h3>📋 Application Checklist</h3>
-
         <p>
             Keep track of documents and important application steps.
         </p>
-
     </div>
 
-
     <div class="feature">
-
         <h3>🛂 Visa Guide</h3>
-
         <p>
             Learn about common student visa requirements and processes.
         </p>
-
     </div>
 
-
     <div class="feature">
-
         <h3>💼 Career Planning</h3>
-
         <p>
             Explore career planning resources for international students.
         </p>
-
     </div>
 
 </section>
@@ -747,9 +728,142 @@ footer a{
         support can reduce your study abroad expenses.
     </p>
 
-    <a href="#tools">
-        Explore Scholarship Tools →
+    <a href="#guidance">
+        Get Free Guidance →
     </a>
+
+</section>
+
+
+<!-- GUIDANCE FORM -->
+
+<section class="guidance" id="guidance">
+
+    <h2>📩 Get Free Study Abroad Guidance</h2>
+
+    <p class="guidance-text">
+        Tell us about your study plans and we will use your information
+        to understand what guidance you are looking for.
+    </p>
+
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+
+        <input type="hidden" name="_subject"
+        value="New StudyRoute Student Inquiry">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="guidance-grid">
+
+            <div>
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+            </div>
+
+
+            <div>
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+            </div>
+
+
+            <div>
+                <label for="whatsapp">WhatsApp Number</label>
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="+92 300 1234567"
+                    required>
+            </div>
+
+
+            <div>
+                <label for="studyCountry">Preferred Country</label>
+
+                <select
+                    id="studyCountry"
+                    name="preferred_country"
+                    required>
+
+                    <option value="">Select a country</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="France">France</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Australia">Australia</option>
+
+                </select>
+            </div>
+
+
+            <div>
+                <label for="studyLevel">Study Level</label>
+
+                <select
+                    id="studyLevel"
+                    name="study_level"
+                    required>
+
+                    <option value="">Select study level</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="PhD">PhD</option>
+                    <option value="Diploma">Diploma</option>
+
+                </select>
+            </div>
+
+
+            <div>
+                <label for="budget">Estimated Budget</label>
+
+                <select
+                    id="budget"
+                    name="budget"
+                    required>
+
+                    <option value="">Select budget</option>
+                    <option value="Under 10 lakh PKR">Under 10 lakh PKR</option>
+                    <option value="10-20 lakh PKR">10–20 lakh PKR</option>
+                    <option value="20-40 lakh PKR">20–40 lakh PKR</option>
+                    <option value="40+ lakh PKR">40+ lakh PKR</option>
+
+                </select>
+            </div>
+
+
+            <div class="guidance-full">
+
+                <label for="message">Your Question</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us what you need help with..."
+                    required></textarea>
+
+            </div>
+
+        </div>
+
+
+        <button type="submit">
+            📩 Send My Inquiry
+        </button>
+
+    </form>
 
 </section>
 
@@ -770,54 +884,38 @@ footer a{
 <section class="roadmap">
 
     <div class="step">
-
         <div class="step-number">1</div>
-
         <h3>Choose Country</h3>
-
         <p>
             Explore destinations and select your preferred country.
         </p>
-
     </div>
 
 
     <div class="step">
-
         <div class="step-number">2</div>
-
         <h3>Find University</h3>
-
         <p>
             Research universities and suitable programs.
         </p>
-
     </div>
 
 
     <div class="step">
-
         <div class="step-number">3</div>
-
         <h3>Apply</h3>
-
         <p>
             Prepare documents and submit your application.
         </p>
-
     </div>
 
 
     <div class="step">
-
         <div class="step-number">4</div>
-
         <h3>Start Journey</h3>
-
         <p>
             Prepare for your visa, travel and new student life.
         </p>
-
     </div>
 
 </section>
@@ -841,6 +939,7 @@ footer a{
         <a href="#calculator">Calculator</a>
         <a href="#countries">Countries</a>
         <a href="#scholarships">Scholarships</a>
+        <a href="#guidance">Guidance</a>
         <a href="#roadmap">Roadmap</a>
 
     </div>
@@ -937,4 +1036,4 @@ function calculateCost(){
 </script>
 
 </body>
-            </html>
+</html>
