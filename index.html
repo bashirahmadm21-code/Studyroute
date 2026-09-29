@@ -206,6 +206,22 @@ button:hover{
     padding:9px 0;
 }
 
+/* DISCLAIMER */
+
+.disclaimer{
+    border-left:5px solid #1677ff;
+    background:#f8fbff;
+}
+
+.disclaimer h2{
+    margin-bottom:12px;
+}
+
+.disclaimer p{
+    color:#667085;
+    font-size:14px;
+}
+
 /* SECTION TITLES */
 
 .section-title{
@@ -646,6 +662,36 @@ footer a{
 </section>
 
 
+<!-- DISCLAIMER -->
+
+<section class="card disclaimer">
+
+    <h2>⚠️ Disclaimer</h2>
+
+    <p>
+        StudyRoute provides general information and estimated calculations
+        for educational and planning purposes only. The study costs, tuition
+        fees, living expenses, visa requirements, exchange rates, scholarships
+        and other information shown on this website may change over time and
+        may vary by university, country and individual circumstances.
+    </p>
+
+    <p style="margin-top:12px;">
+        The cost calculator provides estimates only and should not be considered
+        an exact quotation or financial advice. Students should verify all
+        important information directly with the relevant university, embassy,
+        government authority or official scholarship provider before making
+        decisions or payments.
+    </p>
+
+    <p style="margin-top:12px;">
+        StudyRoute does not guarantee admission, scholarships, visa approval,
+        employment or any particular outcome.
+    </p>
+
+</section>
+
+
 <!-- COUNTRIES -->
 
 <div class="section-title" id="countries">
@@ -803,15 +849,19 @@ footer a{
 
     <form action="https://formsubmit.co/bashirahmadm21@gmail.com" method="POST">
 
-        <input type="hidden" name="_subject"
-        value="New StudyRoute Student Inquiry">
+        <input type="hidden"
+               name="_subject"
+               value="New StudyRoute Student Inquiry">
 
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden"
+               name="_captcha"
+               value="false">
 
         <div class="guidance-grid">
 
             <div>
                 <label for="name">Full Name</label>
+
                 <input
                     type="text"
                     id="name"
@@ -823,6 +873,7 @@ footer a{
 
             <div>
                 <label for="email">Email</label>
+
                 <input
                     type="email"
                     id="email"
@@ -834,6 +885,7 @@ footer a{
 
             <div>
                 <label for="whatsapp">WhatsApp Number</label>
+
                 <input
                     type="tel"
                     id="whatsapp"
@@ -1194,4 +1246,4 @@ function calculateCost(){
 </script>
 
 </body>
-</html>
+    </html>
